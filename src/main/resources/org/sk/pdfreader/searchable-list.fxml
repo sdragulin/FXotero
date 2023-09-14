@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="org.sk.pdfreader.view.SearchableListView" xmlns="http://javafx.com/javafx/17.0.2-ea"
+         xmlns:fx="http://javafx.com/fxml/1">
+
+
+        <ToolBar prefHeight="40.0" prefWidth="600.0" VBox.vgrow="NEVER">
+            <Button mnemonicParsing="false" text="Button"/>
+            <TextField promptText="Search" fx:id="searchTextField"/>
+            <ComboBox prefWidth="150.0" fx:id="searchFieldsCombo"/>
+        </ToolBar>
+        <TreeTableView prefHeight="200.0" prefWidth="200.0" fx:id="treeTableView" VBox.vgrow="ALWAYS">
+
+        </TreeTableView>
+
+</fx:root>

@@ -1,0 +1,67 @@
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<?import org.sk.pdfreader.view.FileTreeView?>
+
+<?import org.sk.pdfreader.view.TabPaneComponent?>
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.sk.pdfreader.MainAppController">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="openMenuButton" mnemonicParsing="false" onAction="#openFolderDialog" text="Open…"/>
+            <Menu mnemonicParsing="false" text="Open Recent"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Close"/>
+            <MenuItem mnemonicParsing="false" text="Save"/>
+            <MenuItem mnemonicParsing="false" text="Save As…"/>
+            <MenuItem mnemonicParsing="false" text="Revert"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Preferences…"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Quit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Undo"/>
+            <MenuItem mnemonicParsing="false" text="Redo"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Cut"/>
+            <MenuItem mnemonicParsing="false" text="Copy"/>
+            <MenuItem mnemonicParsing="false" text="Paste"/>
+            <MenuItem mnemonicParsing="false" text="Delete"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Select All"/>
+            <MenuItem mnemonicParsing="false" text="Unselect All"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About FXotero"/>
+        </Menu>
+    </MenuBar>
+    <SplitPane dividerPositions="0.10, 0.80" focusTraversable="true"
+               VBox.vgrow="ALWAYS">
+        <FileTreeView fx:id="leftPane" minWidth="200" minHeight="700"/>
+
+        <TabPaneComponent fx:id="centralTabPane" tabClosingPolicy="ALL_TABS"/>
+        <AnchorPane fx:id="rightPane"/>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+        <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+        </padding>
+        <Label maxHeight="1.7976931348623157E308"  text="Left status"
+               HBox.hgrow="ALWAYS">
+            <font>
+                <Font size="11.0" />
+            </font>
+            <textFill>
+                <Color red="0.625" green="0.625" blue="0.625" />
+            </textFill>
+        </Label>
+        <Pane fx:id="bottomPane" HBox.hgrow="ALWAYS"/>
+        <Label fx:id="rightStatus" text="Right status" HBox.hgrow="NEVER"/>
+    </HBox>
+</VBox>

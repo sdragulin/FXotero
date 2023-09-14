@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="org.sk.pdfreader.view.SearchableTreeViewComponent" xmlns="http://javafx.com/javafx/17.0.2-ea"
+         xmlns:fx="http://javafx.com/fxml/1">
+        <ToolBar  fx:id="toolBar" VBox.vgrow="NEVER">
+            <Button mnemonicParsing="false" onAction="#search">
+                <graphic>
+                    <FontIcon iconLiteral="fas-search" iconSize="12"/>
+                </graphic>
+            </Button>
+            <TextField fx:id="searchField"/>
+            <MenuButton mnemonicParsing="false">
+                <graphic>
+                    <FontIcon iconLiteral="fas-bars" iconSize="12"/>
+                </graphic>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Action 1"/>
+                    <MenuItem mnemonicParsing="false" text="Action 2"/>
+                </items>
+            </MenuButton>
+        </ToolBar>
+        <TreeView  fx:id="treeView" VBox.vgrow="ALWAYS" prefWidth="200"/>
+</fx:root>
